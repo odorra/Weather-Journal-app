@@ -28,4 +28,9 @@ app.listen(port, () => {console.log("server is running... listening to port $(po
     //replace url with a string of the get route url
     //code to send res data of endpoint object
     res.send(projectData);
+    app.post('/postData', (req, res) => {
+        //replace url with a string of the post route url
+        //code to add data to endpoint object
+        projectData.temp = req.body.temp
+      })
 });
