@@ -2,14 +2,15 @@
 
 // Create a new date instance dynamically with JS
 let d = newDate();
-let baseUrl = https://api.openweathermap.org/data/2.5/weather
-//Take care that getMonth() counts month from 0 to 11 so you need to add 1 to its response 
 let newDate = d.getMonth()+ 1 + "."+ d.getDate()+'.'+ d.getFullYear();
+let baseUrl = "https://api.openweathermap.org/data/2.5/weather";
+//Take care that getMonth() counts month from 0 to 11 so you need to add 1 to its response 
 const getData = async () => {
   //code to fetch data from api (await the fetch)
   const request = await fetch(
     baseUrl + `?zip=${zipInput.value}&apid=${4d685eb2ad2a8bd0a5b5707bf019b92c}&units=metric`
-  );
+    );
+};
   try {
     //code to convert json data and return result (await conversion)
     const response = await request.json()
@@ -72,4 +73,4 @@ function performAction() {
 	}
 };
 
-.then(() => updateUI())
+.then(() => updateUI());
