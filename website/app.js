@@ -56,21 +56,6 @@ btn.addEventListener('click', performAction)
 //Don't use parentheses for function inside event listener or it will not wait for event  
 function performAction() {
    postData('/comment', {content:feeling.value});
-
-       if (feeling.value != '') {
-        var btn = document.createElement("div");
-        var text = document.createTextNode(feeling.value);
-        btn.appendChild(text);
-        btn.className = "comment";
-        comment_cont.appendChild(btn);
-       }
-	let url = "http://api.openweathermap.org/data/2.5/weather?zip=" + user_zip.value + "&appid=db6608063a9d72758e29ea323da07bd1";
-	if (user_zip.value != "") {
-		fetch(url, settings)
-			.then(res => res.json())
-  } else {
-		alert('You Must Add ZIP Code');
-	}
 };
 
 .then(() => updateUI());
