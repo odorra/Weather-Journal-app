@@ -43,7 +43,7 @@ const postData = async function (url =" ", data = { }) {
 
 const updateUI = async () => {
     //code to fetch data from server. Use url from GET route (await the fetch)
-    await fetch("/getData")
+    await fetch("/postData")
   try {
     //code to convert json data. (await conversion)
     //code to update the UI with fetched data
