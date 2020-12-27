@@ -24,13 +24,13 @@ app.use(express.static('website'));
 // Setup Server
 app.listen(port, () => {console.log("server is running... listening to port $(port)");});
                  
-     app.get('/getData', (req, res) => {
+app.get('/getData', (req, res) => {
     //replace url with a string of the get route url
     //code to send res data of endpoint object
-    res.send(projectData);
-    app.post('/postData', (req, res) => {
+    res.send(projectData)
+    })
+app.post('/postData', (req, res) => {
         //replace url with a string of the post route url
         //code to add data to endpoint object
-        projectData.temp = req.body.temp
-      })
-});
+    projectData.temp = req.body.temp
+    });
